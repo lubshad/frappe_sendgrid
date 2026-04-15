@@ -13,7 +13,8 @@ override_email_send = "frappe_sendgrid.utils.email_sender.send_via_sendgrid"
 
 # Extend EmailAccount to skip SMTP validation for "Sendgrid HTTP" service
 override_doctype_class = {
-	"Email Account": "frappe_sendgrid.overrides.email_account.SendgridEmailAccount"
+	"Email Account": "frappe_sendgrid.overrides.email_account.SendgridEmailAccount",
+	"Email Queue": "frappe_sendgrid.overrides.email_queue.SendgridEmailQueue",
 }
 
 # Inject client-side defaults for "Sendgrid HTTP" service option
